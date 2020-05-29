@@ -1,0 +1,32 @@
+{% include '_header.html' %}
+{% include '_nav.html' %}
+
+<div class="container">
+
+    {% for item in categories: %}
+
+    {% if item['avalible'] != 0: %}
+
+    <div class="categories__box">
+        
+        <img src="img/{{ item['image'] }}">
+
+        <h2>{{ item['name'] }}</h2>
+
+        <p>{{ item['description'] }}</p>
+
+        <a href="{{ item['path'] }}">
+
+            <div class="btn text__center">Więcej</div>
+
+        </a>
+
+    </div>
+
+    {% endif %}
+    
+    {% endfor %}
+
+</div>
+
+{% include '_footer.html' %}

@@ -1,0 +1,45 @@
+<nav>
+    <div class="header row">
+
+        <div class="header__element text__left">
+
+            <h2>{{ main_data['name'] }}</h2>
+
+        </div>
+
+        <div class="header__element text__right header__element--topnavi">
+
+            <button class="btn">Koszyk(0)</button>
+
+        </div>
+        
+    </div>
+
+    <div class="header__navigation row row__left">
+
+        <div class="header__navigation--col {% if main_data['route'] == '/': %} active {% endif %}">
+            <a href="/"><span>Strona Główna</span></a>
+        </div>
+
+        <div class="header__navigation--col">
+            <a href="/about"><span>O nas</span></a>
+        </div>
+
+        <div class="header__navigation--col {% if main_data['route'] == '/categories': %} active {% endif %}">
+            <a href="/categories"><span>Kategorie</span></a>
+        </div>
+
+        <div class="header__navigation--col">
+            <span>Nowości</span>
+        </div>
+
+        <div class="header__navigation--col">
+            <span>Promocje</span>
+        </div>
+
+        <div class="header__navigation--col contact">
+            <span>Kontakt</span>
+        </div>
+
+    </div>
+</nav>
