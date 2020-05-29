@@ -1,0 +1,41 @@
+{% include '_header.html' %}
+{% include '_nav.html' %}
+
+<div class="row row--center padding--top">
+
+    {% for item in products: %}
+    
+
+        <div class="product__details--col column column-center">
+
+            <img src="/img/products/{{ item['imgs'] }}"/>
+
+        </div>
+
+        <div class="product__details--col column column-center">
+
+            <h1>{{ item['name'] }}</h1>
+
+            <h2>{{ item['short_description'] }}</h2>
+
+            <div class="price__box">
+                
+                <h1>{{ item['price'] }} {{ main_data['currency'] }}</h1>
+            
+            </div>
+            <span class="description">{{ item['description'] }}</span>
+
+            <br />
+
+            <button class="btn btn__product">Kup Online</button>
+
+        </div>
+
+
+
+    {% endfor %}
+
+
+</div>
+
+{% include '_footer.html' %}

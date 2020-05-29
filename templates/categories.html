@@ -15,7 +15,7 @@
 
         <p>{{ item['description'] }}</p>
 
-        <a href="{{ item['path'] }}">
+        <a href="/categories{{ item['path'] }}">
 
             <div class="btn text__center">Więcej</div>
 
@@ -24,7 +24,7 @@
     </div>
 
     {% endif %}
-    
+
     {% endfor %}
 
 </div>

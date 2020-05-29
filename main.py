@@ -26,6 +26,7 @@ with cnt.cursor() as cursor:
         main_data['footer_tags'] = result['footer_tags']
         main_data['maintance'] = result['maintance']
         main_data['extra'] = result['extra']
+        main_data['currency'] = 'PLN'
 
 @app.route('/')
 def init_index():
@@ -37,7 +38,12 @@ def init_category():
     main_data['route'] = '/categories'
     return views.categories_page(main_data)
 
-@app.route('/path/<path:subpath>')
+@app.route('/categories/<path:subpath>')
 def init_subpath(subpath):
+    
+        return views.categories_sub(main_data,subpath)
 
-    return views.subpath_page(main_data,subpath)
+@app.route('/products/<path:subpath>')
+def init_prodpage(subpath):
+
+        return views.product_page(main_data,subpath)

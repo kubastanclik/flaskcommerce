@@ -3,6 +3,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -94,4 +98,23 @@ nav {
     float: left;
     margin: 25px 5px 10px 5px;
     height: 550px;
+}
+
+.product__box {
+    display: block;
+    float: left;
+    margin: 25px 5px 10px 5px;
+    height: 550px;
+}
+
+.product__container {
+    width: 100%;
+}
+
+.product__details--col {
+    width: 50%;
+}
+
+.btn__product {
+    font-size: 28px!important;
 }

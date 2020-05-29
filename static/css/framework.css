@@ -48,6 +48,10 @@
     justify-content: flex-end;
 }
 
+.padding--top {
+    padding-top: 20px;
+}
+
 .btn {
     padding: 0.5rem 1rem 0.5rem 1rem;
     font-size: 14px;
